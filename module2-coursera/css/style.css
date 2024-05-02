@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+}
+
+.section{
+    background-color: gray;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 30px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.child1{
+    border: 3px solid black;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    right: 0;
+    
+}
+
+.s1 > .child1{
+    background-color: rgb(249, 140, 126);
+}
+.s2 > .child1{
+    background-color: rgb(147, 17, 0);
+}
+.s3 > .child1{
+    background-color: rgb(255, 226, 141);
+}
+
+@media (min-width : 768px){
+    .s1, .s2{
+        float: left;
+        width: 48%;
+    }
+    .s1{
+        margin-right: 4%;
+        margin-bottom: 30px;
+    }
+    .s3{
+        clear: both;
+    }
+}
+
+@media (min-width : 992px){
+    .section{
+            float: none; /* Annuler le flottement */
+            display: inline-block; /* Utiliser display: inline-block; pour les aligner sur la même ligne */
+            width: 30%;
+    }
+    .s1,.s2{
+        margin-right: 4%;
+    }
+}
